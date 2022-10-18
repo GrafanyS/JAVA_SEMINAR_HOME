@@ -41,6 +41,7 @@ public class Main {
 }
 //  k1 k1 k2 k2 k2
 
+
  /*
     public static void main(String[] args) {
         int a = 1;
