@@ -83,7 +83,7 @@ public class HeapSort {
         ob.sort(array);
 
         System.out.println();
-        System.out.println("Sorted array is");
+        System.out.println("Отсортированный массив");
         printArray(array);
     }
 }
