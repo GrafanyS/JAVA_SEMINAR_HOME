@@ -21,7 +21,7 @@ public class Main {
         int k2 = 1; // прибавление на 1
         StringBuilder answer = new StringBuilder();
         if (a > b) {
-            System.out.println("нет решения");
+            System.err.println("нет решения");
         } else {
             while (a < b) {
                 if ((a*k1) < b){
@@ -39,6 +39,7 @@ public class Main {
         }
     }
 }
+//  k1 k1 k2 k2 k2
 
  /*
     public static void main(String[] args) {
