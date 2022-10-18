@@ -1,5 +1,7 @@
 import java.util.Scanner;
-
+/**
+ * Написать программу вычисления n-ого треугольного числа
+ * */
 public class triangularNumber {
     public static void main(String[] args) {
         try (Scanner scan = new Scanner(System.in)) {
