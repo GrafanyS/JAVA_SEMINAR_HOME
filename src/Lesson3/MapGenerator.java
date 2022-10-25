@@ -31,18 +31,18 @@ public class MapGenerator {
     }
 
     // Установка точки начала по координатам x, y равной 1
-    public void setStart(Point2D pos) {
+    public void setStart(Point pos) {
         map[pos.x][pos.y] = 1;
     }
 
     // Установка точки выхода
-    public Point2D setExit(int ep) {
-        Point2D pexit = new Point2D(0, 0);
+    public Point setExit(int ep) {
+        Point pexit = new Point(0, 0);
         boolean found = false;
         for (int i = 0; i < map.length; i++) {
             for (int j = 0; j < map[i].length; j++) {
                 if (map[i][j] == ep) {
-                    pexit = new Point2D(i, j);
+                    pexit = new Point(i, j);
                     found = true;
                     break;
                 }
