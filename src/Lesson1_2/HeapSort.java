@@ -67,10 +67,10 @@ public class HeapSort {
         int minRandom = 1;
         int maxRandom;
 
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("введите макс элемент");
-        maxRandom = scanner.nextInt();
-
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("введите макс элемент");
+            maxRandom = scanner.nextInt();
+        }
         Random random = new Random(System.currentTimeMillis());
         String comma="";
         for (int i = 0; i < array.length; i++) {

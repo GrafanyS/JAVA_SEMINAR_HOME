@@ -21,33 +21,34 @@ public class InsertionSort {
     public static void main(String[] args) {
 //        int[] sortArr = {45, 8, 5, 1, 25, 17};
         int counts;
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("введите колличество элементов");
-        counts= scanner.nextInt();
-        int [] sortArr = new int[counts];
-        int minRandom;
-        int maxRandom;
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.println("введите колличество элементов");
+            counts= scanner.nextInt();
+            int [] sortArr = new int[counts];
+            int minRandom;
+            int maxRandom;
 
-        System.out.println("введите минимальный элемент");
-        minRandom= scanner.nextInt();
-        System.out.println("введите максимальный элемент");
-        maxRandom = scanner.nextInt();
-        Random random = new Random(System.currentTimeMillis());
+            System.out.println("введите минимальный элемент");
+            minRandom= scanner.nextInt();
+            System.out.println("введите максимальный элемент");
+            maxRandom = scanner.nextInt();
+            Random random = new Random(System.currentTimeMillis());
 
-        System.out.println("Список до сортировки");
+            System.out.println("Список до сортировки");
 
-        String comma="";
-        for (int i = 0; i < sortArr.length; i++) {
-            sortArr[i] = minRandom + random.nextInt(maxRandom - minRandom + 1);
-            System.out.printf("%s%s", comma, sortArr[i]);
-            // Now define comma
-            comma = ",";
-        }
+            String comma="";
+            for (int i = 0; i < sortArr.length; i++) {
+                sortArr[i] = minRandom + random.nextInt(maxRandom - minRandom + 1);
+                System.out.printf("%s%s", comma, sortArr[i]);
+                // Now define comma
+                comma = ",";
+            }
 
-        System.out.println("\nСписок после сортировки вставками");
-        insertionSort(sortArr);
-        for (int j : sortArr) {
-            System.out.printf("%s ",j);
+            System.out.println("\nСписок после сортировки вставками");
+            insertionSort(sortArr);
+            for (int j : sortArr) {
+                System.out.printf("%s ",j);
+            }
         }
     }
 }

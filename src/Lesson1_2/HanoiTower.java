@@ -25,15 +25,16 @@ public class HanoiTower {
         return (6-(a+b));
     }
     public static void main(String [] args) {
-        Scanner in = new Scanner(System.in);
-        int n,from,to;
-        System.out.print("Введите количество колец = ");
-        n=in.nextInt();
-        System.out.print("от = ");
-        from=in.nextInt();
-        System.out.print("к = ");
-        to=in.nextInt();
-        hanoi(n,from,to);
+        try (Scanner in = new Scanner(System.in)) {
+            int n,from,to;
+            System.out.print("Введите количество колец = ");
+            n=in.nextInt();
+            System.out.print("от = ");
+            from=in.nextInt();
+            System.out.print("к = ");
+            to=in.nextInt();
+            hanoi(n,from,to);
+        }
         System.out.println("считать количество шагов = "+count);
     }
 }
