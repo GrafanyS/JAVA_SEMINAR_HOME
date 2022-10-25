@@ -1,3 +1,5 @@
+package Lesson1_2;
+
 import java.util.Scanner;
 /**
  * Написать программу вычисления n-ого треугольного числа
