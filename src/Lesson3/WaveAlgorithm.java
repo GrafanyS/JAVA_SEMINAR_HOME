@@ -12,30 +12,24 @@ public class WaveAlgorithm {
         //Печать карты
         var mg = new MapGenerator();
         //Установление координат начальной точки - 1
-        Point2D ps = new Point2D(3,3);
+        Point2D ps = new Point2D(3, 3);
         mg.setStart(ps);
         System.out.println("Пустая карта K - начало маршрута");
-        System.out.println(
-                new MapPrinter().mapColor(
-                        mg.getMap())
+        System.out.println(new MapPrinter().mapColor(mg.getMap())
 
         );
 
         var lee = new waveAlgorithm(mg.getMap());
         lee.SpreadWave(new Point2D(3, 3));
         System.out.println("Заполненная карта после оцифровки волновым алгоритмом");
-        System.out.println(
-                new MapPrinter().rawData(
-                        mg.getMap())
+        System.out.println(new MapPrinter().rawData(mg.getMap())
 
         );
         //Нанесение на карьу маршрута с начальной точки 1 до конечной 19
         var rd = lee.getRoad(mg.setExit(19));
         lee.drawRoad(rd);
         System.out.println("Заполненная карта с маршрутом");
-        System.out.println(
-                new MapPrinter().mapColor(
-                        mg.getMap()));
+        System.out.println(new MapPrinter().mapColor(mg.getMap()));
 
     }
 }
