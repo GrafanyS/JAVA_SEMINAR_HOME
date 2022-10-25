@@ -20,11 +20,11 @@ public class InsertionSort {
 
     public static void main(String[] args) {
 //        int[] sortArr = {45, 8, 5, 1, 25, 17};
-        int count = 0;
+        int counts;
         Scanner scanner = new Scanner(System.in);
         System.out.println("введите колличество элементов");
-        count= scanner.nextInt();
-        int [] sortArr = new int[count];
+        counts= scanner.nextInt();
+        int [] sortArr = new int[counts];
         int minRandom;
         int maxRandom;
 
