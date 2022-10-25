@@ -1,3 +1,5 @@
+package Lesson1_2;
+
 /* Наивная рекурсивная реализация задачи LCS в java*/
 public class LongestCommonSubsequence {
 
