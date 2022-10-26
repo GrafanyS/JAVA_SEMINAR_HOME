@@ -89,4 +89,3 @@ public class HeapSort {
         printArray(array);
     }
 }
-
