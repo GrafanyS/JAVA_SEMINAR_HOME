@@ -38,3 +38,4 @@ public class HanoiTower {
         System.out.println("считать количество шагов = "+count);
     }
 }
+//
