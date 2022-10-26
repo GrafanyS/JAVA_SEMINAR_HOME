@@ -14,6 +14,7 @@ package Lesson1_2;
  * ответ: нет решения.
  * Подумать над тем, как сделать минимальное количество команд
  */
+@SuppressWarnings("ALL")
 public class Main {
     public static void main(String[] args) {
 
@@ -22,19 +23,23 @@ public class Main {
         int k1 = 2; // умножение на 2
         int k2 = 1; // прибавление на 1
         StringBuilder answer = new StringBuilder();
-        while (a < b) {
-            if ((a*k1) < b){
-                a = a*k1;
-                answer.append("k1");
+        if (a > b) {
+            System.err.println("нет решения");
+        } else {
+            while (a < b) {
+                if ((a*k1) < b){
+                    a = a*k1;
+                    answer.append("k1");
 
-            } else {
-                a = a+k2;
-                answer.append("k2");
+                } else {
+                    a = a+k2;
+                    answer.append("k2");
+                }
             }
+
+            System.out.println(answer);
+
         }
-
-        System.out.println(answer);
-
     }
 }
 //  k1 k1 k2 k2 k2
